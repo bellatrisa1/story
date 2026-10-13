@@ -1,0 +1,62 @@
+@font-face {
+  font-family: Book;
+  src: url("/fonts/book.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 400 700;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  background: #f4f0e6;
+  color: #31483b;
+}
+body {
+  margin: 0;
+  font-family: Book, Georgia, serif;
+  -webkit-font-smoothing: antialiased;
+}
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  min-height: 44px;
+}
+button:disabled {
+  cursor: default;
+  opacity: 0.4;
+}
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #8b6936;
+  outline-offset: 5px;
+}
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+button {
+  touch-action: manipulation;
+}
+::selection {
+  background: #d9dfcb;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}
